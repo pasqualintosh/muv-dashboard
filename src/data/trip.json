@@ -1,0 +1,713 @@
+[
+  {
+    "lon": 13.3647038,
+    "lat": 38.1145815,
+    "path": 1,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3645511,
+    "lat": 38.1145506,
+    "path": 2,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3644268,
+    "lat": 38.1145599,
+    "path": 3,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3642877,
+    "lat": 38.114544,
+    "path": 4,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3641679,
+    "lat": 38.1145215,
+    "path": 5,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3638629,
+    "lat": 38.1144594,
+    "path": 6,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3637744,
+    "lat": 38.1143815,
+    "path": 7,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3635595,
+    "lat": 38.1143364,
+    "path": 8,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3633793,
+    "lat": 38.1143488,
+    "path": 9,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.362091,
+    "lat": 38.1146504,
+    "path": 10,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3621694,
+    "lat": 38.1145418,
+    "path": 11,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3624066,
+    "lat": 38.1145537,
+    "path": 12,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3623521,
+    "lat": 38.1145166,
+    "path": 13,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3622463,
+    "lat": 38.1145502,
+    "path": 14,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3618529,
+    "lat": 38.1152502,
+    "path": 15,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3620279,
+    "lat": 38.1148356,
+    "path": 16,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.361794,
+    "lat": 38.1154975,
+    "path": 17,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3618419,
+    "lat": 38.1153269,
+    "path": 18,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3616596,
+    "lat": 38.1156162,
+    "path": 19,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3616827,
+    "lat": 38.1155601,
+    "path": 20,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3616355,
+    "lat": 38.1155849,
+    "path": 21,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3610577,
+    "lat": 38.116428,
+    "path": 22,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3610199,
+    "lat": 38.1164782,
+    "path": 23,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3609538,
+    "lat": 38.1165447,
+    "path": 24,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3608496,
+    "lat": 38.1167186,
+    "path": 25,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3607947,
+    "lat": 38.1167492,
+    "path": 26,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3607088,
+    "lat": 38.1168546,
+    "path": 27,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3606944,
+    "lat": 38.1168711,
+    "path": 28,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3604051,
+    "lat": 38.1173248,
+    "path": 29,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3604094,
+    "lat": 38.1173741,
+    "path": 30,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3603112,
+    "lat": 38.1176206,
+    "path": 31,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3602754,
+    "lat": 38.1177067,
+    "path": 32,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3601218,
+    "lat": 38.1178482,
+    "path": 33,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.359634,
+    "lat": 38.1185431,
+    "path": 34,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3596109,
+    "lat": 38.1185779,
+    "path": 35,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3595376,
+    "lat": 38.1186905,
+    "path": 36,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3594701,
+    "lat": 38.1188056,
+    "path": 37,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3592882,
+    "lat": 38.1190813,
+    "path": 38,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.359298,
+    "lat": 38.1190837,
+    "path": 39,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3589241,
+    "lat": 38.119584,
+    "path": 40,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3589021,
+    "lat": 38.1195975,
+    "path": 41,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3588492,
+    "lat": 38.1197021,
+    "path": 42,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3587716,
+    "lat": 38.1198543,
+    "path": 43,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3586698,
+    "lat": 38.1200175,
+    "path": 44,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3585707,
+    "lat": 38.1202061,
+    "path": 45,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3584758,
+    "lat": 38.1203067,
+    "path": 46,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.358202,
+    "lat": 38.1204387,
+    "path": 47,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3581422,
+    "lat": 38.1204645,
+    "path": 48,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3579823,
+    "lat": 38.1206037,
+    "path": 49,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3579436,
+    "lat": 38.1206708,
+    "path": 50,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3579074,
+    "lat": 38.1207548,
+    "path": 51,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3578676,
+    "lat": 38.1208695,
+    "path": 52,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3578207,
+    "lat": 38.1210502,
+    "path": 53,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3578176,
+    "lat": 38.1211536,
+    "path": 54,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3578043,
+    "lat": 38.1212293,
+    "path": 55,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3575661,
+    "lat": 38.1215058,
+    "path": 56,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3575256,
+    "lat": 38.1217966,
+    "path": 57,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3574392,
+    "lat": 38.1219473,
+    "path": 58,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3573697,
+    "lat": 38.1220527,
+    "path": 59,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3573276,
+    "lat": 38.1221232,
+    "path": 60,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3572726,
+    "lat": 38.1221598,
+    "path": 61,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3565525,
+    "lat": 38.122787,
+    "path": 62,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3565269,
+    "lat": 38.1228278,
+    "path": 63,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3564175,
+    "lat": 38.1229111,
+    "path": 64,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3562548,
+    "lat": 38.1229546,
+    "path": 65,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3560044,
+    "lat": 38.1230339,
+    "path": 66,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3558786,
+    "lat": 38.123097,
+    "path": 67,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3557237,
+    "lat": 38.1231739,
+    "path": 68,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3554637,
+    "lat": 38.1232964,
+    "path": 69,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3552529,
+    "lat": 38.1234238,
+    "path": 70,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3550572,
+    "lat": 38.1235479,
+    "path": 71,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3550483,
+    "lat": 38.1235531,
+    "path": 72,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3550363,
+    "lat": 38.1235772,
+    "path": 73,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.355003,
+    "lat": 38.1236171,
+    "path": 74,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.355003,
+    "lat": 38.1236171,
+    "path": 75,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3550157,
+    "lat": 38.1236248,
+    "path": 76,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3549979,
+    "lat": 38.123622,
+    "path": 77,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3549387,
+    "lat": 38.1236557,
+    "path": 78,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  },
+  {
+    "lon": 13.3550332,
+    "lat": 38.1235693,
+    "path": 79,
+    "user_id": 20,
+    "typology_id": 2,
+    "segment_id": 158,
+    "route_id": 149
+  }
+]
