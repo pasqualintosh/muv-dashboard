@@ -29,11 +29,11 @@ export default function RouteWrapper({
   return <Route {...rest} component={Component} />;
 }
 
-RouteWrapper.propTypes = {
-  isPrivate: PropTypes.bool,
-  component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
-    .isRequired,
-};
-RouteWrapper.defaultProps = {
-  isPrivate: false,
-};
+// RouteWrapper.propTypes = {
+//   isPrivate: PropTypes.bool,
+//   component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
+//     .isRequired,
+// };
+// RouteWrapper.defaultProps = {
+//   isPrivate: false,
+// };
