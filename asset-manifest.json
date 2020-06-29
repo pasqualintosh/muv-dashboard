@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/pasqualintosh/muv-dashboard/static/css/main.737b90bc.chunk.css",
-    "main.js": "/pasqualintosh/muv-dashboard/static/js/main.b2a92b7c.chunk.js",
-    "main.js.map": "/pasqualintosh/muv-dashboard/static/js/main.b2a92b7c.chunk.js.map",
-    "runtime-main.js": "/pasqualintosh/muv-dashboard/static/js/runtime-main.863f7523.js",
-    "runtime-main.js.map": "/pasqualintosh/muv-dashboard/static/js/runtime-main.863f7523.js.map",
-    "static/js/2.90d793b6.chunk.js": "/pasqualintosh/muv-dashboard/static/js/2.90d793b6.chunk.js",
-    "static/js/2.90d793b6.chunk.js.map": "/pasqualintosh/muv-dashboard/static/js/2.90d793b6.chunk.js.map",
-    "index.html": "/pasqualintosh/muv-dashboard/index.html",
-    "precache-manifest.b6f8e50a71574c87ed0ff0d9690d44a4.js": "/pasqualintosh/muv-dashboard/precache-manifest.b6f8e50a71574c87ed0ff0d9690d44a4.js",
-    "service-worker.js": "/pasqualintosh/muv-dashboard/service-worker.js",
-    "static/css/main.737b90bc.chunk.css.map": "/pasqualintosh/muv-dashboard/static/css/main.737b90bc.chunk.css.map",
-    "static/js/2.90d793b6.chunk.js.LICENSE.txt": "/pasqualintosh/muv-dashboard/static/js/2.90d793b6.chunk.js.LICENSE.txt"
+    "main.css": "/muv-dashboard/static/css/main.737b90bc.chunk.css",
+    "main.js": "/muv-dashboard/static/js/main.1821ad2e.chunk.js",
+    "main.js.map": "/muv-dashboard/static/js/main.1821ad2e.chunk.js.map",
+    "runtime-main.js": "/muv-dashboard/static/js/runtime-main.2b7b4df3.js",
+    "runtime-main.js.map": "/muv-dashboard/static/js/runtime-main.2b7b4df3.js.map",
+    "static/js/2.a9939697.chunk.js": "/muv-dashboard/static/js/2.a9939697.chunk.js",
+    "static/js/2.a9939697.chunk.js.map": "/muv-dashboard/static/js/2.a9939697.chunk.js.map",
+    "index.html": "/muv-dashboard/index.html",
+    "precache-manifest.45d2c8a2c6feb90dbd677dabadb7bc21.js": "/muv-dashboard/precache-manifest.45d2c8a2c6feb90dbd677dabadb7bc21.js",
+    "service-worker.js": "/muv-dashboard/service-worker.js",
+    "static/css/main.737b90bc.chunk.css.map": "/muv-dashboard/static/css/main.737b90bc.chunk.css.map",
+    "static/js/2.a9939697.chunk.js.LICENSE.txt": "/muv-dashboard/static/js/2.a9939697.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.863f7523.js",
-    "static/js/2.90d793b6.chunk.js",
+    "static/js/runtime-main.2b7b4df3.js",
+    "static/js/2.a9939697.chunk.js",
     "static/css/main.737b90bc.chunk.css",
-    "static/js/main.b2a92b7c.chunk.js"
+    "static/js/main.1821ad2e.chunk.js"
   ]
 }
