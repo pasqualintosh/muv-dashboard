@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/pasqualintosh/muv-dashboard/static/css/main.737b90bc.chunk.css",
+    "main.js": "/pasqualintosh/muv-dashboard/static/js/main.b2a92b7c.chunk.js",
+    "main.js.map": "/pasqualintosh/muv-dashboard/static/js/main.b2a92b7c.chunk.js.map",
+    "runtime-main.js": "/pasqualintosh/muv-dashboard/static/js/runtime-main.863f7523.js",
+    "runtime-main.js.map": "/pasqualintosh/muv-dashboard/static/js/runtime-main.863f7523.js.map",
+    "static/js/2.90d793b6.chunk.js": "/pasqualintosh/muv-dashboard/static/js/2.90d793b6.chunk.js",
+    "static/js/2.90d793b6.chunk.js.map": "/pasqualintosh/muv-dashboard/static/js/2.90d793b6.chunk.js.map",
+    "index.html": "/pasqualintosh/muv-dashboard/index.html",
+    "precache-manifest.b6f8e50a71574c87ed0ff0d9690d44a4.js": "/pasqualintosh/muv-dashboard/precache-manifest.b6f8e50a71574c87ed0ff0d9690d44a4.js",
+    "service-worker.js": "/pasqualintosh/muv-dashboard/service-worker.js",
+    "static/css/main.737b90bc.chunk.css.map": "/pasqualintosh/muv-dashboard/static/css/main.737b90bc.chunk.css.map",
+    "static/js/2.90d793b6.chunk.js.LICENSE.txt": "/pasqualintosh/muv-dashboard/static/js/2.90d793b6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.863f7523.js",
+    "static/js/2.90d793b6.chunk.js",
+    "static/css/main.737b90bc.chunk.css",
+    "static/js/main.b2a92b7c.chunk.js"
+  ]
+}
