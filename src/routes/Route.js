@@ -1,39 +1,30 @@
-import React from "react";
+import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
-import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
-export default function RouteWrapper({
-  component: Component,
-  isPrivate,
-  ...rest
-}) {
-  const signed = false;
-  /**
-   * Redirect user to SignIn page if he tries to access a private      route
-   * without authentication.
-   */
-  // if (isPrivate && !signed) {
-  //   return <Redirect to="/login" />;
-  // }
-  /**
-   * Redirect user to Main page if he tries to access a non private route
-   * (SignIn or SignUp) after being authenticated.
-   */
-  // if (!isPrivate && signed) {
-  //   return <Redirect to="/dashboard" />;
-  // }
+class RouteWrapper extends Component {
+  constructor(props) {
+    super(props);
 
-  /**
-   * If not included on both previous cases, redirect user to the desired route.
-   */
-  return <Route {...rest} component={Component} />;
+    this.state = {};
+  }
+
+  render() {
+    if (this.props.isPrivate && !this.props.userState.logged) {
+      return <Redirect to="/login" />;
+    }
+
+    if (!this.props.isPrivate && this.props.userState.logged) {
+      return <Redirect to="/dashboard" />;
+    }
+    return <Route props={{ ...this.props }} component={this.props.component} />;
+  }
 }
 
-// RouteWrapper.propTypes = {
-//   isPrivate: PropTypes.bool,
-//   component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
-//     .isRequired,
-// };
-// RouteWrapper.defaultProps = {
-//   isPrivate: false,
-// };
+const withData = connect((state) => {
+  return {
+    userState: state.user,
+  };
+});
+
+export default withData(RouteWrapper);

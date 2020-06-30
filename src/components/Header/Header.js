@@ -17,8 +17,8 @@ class Header extends Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             {/* <Nav.Link href="/">Home</Nav.Link> */}
-            {/* <Nav.Link href="/charts">Charts</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link> */}
+            <Nav.Link href="/charts">Charts</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
             {/* 
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -33,10 +33,10 @@ class Header extends Component {
             </NavDropdown> 
             */}
           </Nav>
-          {/* <Form inline>
+          <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
             <Button variant="outline-success">Search</Button>
-          </Form> */}
+          </Form>
         </Navbar.Collapse>
       </Navbar>
     );

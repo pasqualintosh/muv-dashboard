@@ -11,7 +11,7 @@ class Routes extends Component {
   render() {
     return (
       <Switch>
-        <RouteWrapper path="/" exact component={Palermo} />
+        <RouteWrapper path="/" isPrivate={true} exact component={Welcome} />
         <RouteWrapper path="/login" exact component={Login} />
         <RouteWrapper path="/charts" exact component={Charts} />
         <RouteWrapper path="/palermo" exact component={Palermo} />
