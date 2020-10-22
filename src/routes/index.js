@@ -13,7 +13,8 @@ class Routes extends Component {
     return (
       <Switch>
         {/* <RouteWrapper path="/" isPrivate={true} exact component={Welcome} /> */}
-        <RouteWrapper path="/" exact component={Welcome} />
+        {/* <RouteWrapper path="/" exact component={Welcome} /> */}
+        <RouteWrapper path="/" exact component={Ghella} />
         <RouteWrapper path="/login" exact component={Login} />
         <RouteWrapper path="/charts" exact component={Charts} />
         <RouteWrapper path="/palermo" exact component={Palermo} />

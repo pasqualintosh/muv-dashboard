@@ -9,7 +9,7 @@ class Ghella extends Component {
                 <hr></hr>
                 <Row className="justify-content-md-center">
                     <Col>
-                        <h6>Ghella</h6>
+                        <h6>Dataset Dipendenti Ghella</h6>
                         <Map />
                     </Col>
                 </Row>
