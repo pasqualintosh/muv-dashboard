@@ -3,7 +3,8 @@ import { Map, TileLayer, Polyline, Marker, Popup } from "react-leaflet";
 import "./Map.css";
 import { precovid } from "./../../data/precovid";
 import { smartworking } from "./../../data/smartworking";
-import { brt as bus_stop } from "./../../data/brt_2";
+import { bus } from "./../../data/bus";
+import { railway } from "./../../data/railway";
 import L from "leaflet";
 import { Form } from "react-bootstrap";
 
@@ -18,6 +19,14 @@ export const personPnt = new L.Icon({
 export const busPnt = new L.Icon({
   iconUrl: "./../../assets/bus.svg",
   iconRetinaUrl: "./../../assets/bus.svg",
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -35],
+  iconSize: [40, 40],
+});
+
+export const trainPnt = new L.Icon({
+  iconUrl: "./../../assets/train.svg",
+  iconRetinaUrl: "./../../assets/train.svg",
   iconAnchor: [20, 40],
   popupAnchor: [0, -35],
   iconSize: [40, 40],
@@ -256,16 +265,51 @@ class MapComponent extends Component {
     });
   }
 
-  renderTPLMarkers() {
+  renderBusTooltip(e, index) {
+    if (e.properties.name) {
+      return (<div>
+        <p>{e.properties.name}</p>
+      </div>)
+    }
+    else {
+      return <div />
+    }
+  }
+
+  renderBusMarkers() {
     if (this.state.display_tpl)
-      return bus_stop.features.map((e, index) => {
+      return bus.features.map((e, index) => {
         if (e.geometry && index % 22 == 0)
           return (
             <Marker
               position={[e.geometry.coordinates[1], e.geometry.coordinates[0]]}
               key={index}
               icon={busPnt}
-            ></Marker>
+            >
+              <Popup style={{ width: 300, keepInView: true }}>
+                {this.renderBusTooltip(e, index)}
+              </Popup>
+            </Marker>
+          );
+        else return <div key={index} />;
+      });
+    else return <div />;
+  }
+
+  renderTrainMarkers() {
+    if (this.state.display_tpl)
+      return railway.features.map((e, index) => {
+        if (e.geometry && index % 22 == 0)
+          return (
+            <Marker
+              position={[e.geometry.coordinates[1], e.geometry.coordinates[0]]}
+              key={index}
+              icon={trainPnt}
+            >
+              {/* <Popup style={{ width: 300, keepInView: true }}>
+                {this.renderBusTooltip(e, index)}
+              </Popup> */}
+            </Marker>
           );
         else return <div key={index} />;
       });
@@ -330,7 +374,7 @@ class MapComponent extends Component {
                 display_tpl: !this.state.display_tpl,
               });
             }}
-            onChange={() => {}}
+            onChange={() => { }}
           />
           <label>&nbsp;Fermate TPL</label>
         </div>
@@ -348,7 +392,8 @@ class MapComponent extends Component {
           />
           <Marker position={start_point} icon={companyPnt}></Marker>
           {this.renderHumanMarkers()}
-          {this.renderTPLMarkers()}
+          {this.renderBusMarkers()}
+          {this.renderTrainMarkers()}
         </Map>
         <hr />
         <div>
@@ -359,7 +404,7 @@ class MapComponent extends Component {
               type="radio"
               checked={this.state.intermedia_andata}
               onClick={() => this.onChangeAndata()}
-              onChange={() => {}}
+              onChange={() => { }}
             />
             <label className="form-check-label">
               Dipendenti con tappa intermedia viaggio d'andata
@@ -371,7 +416,7 @@ class MapComponent extends Component {
               type="radio"
               checked={this.state.intermedia_ritorno}
               onClick={() => this.onChangeRitorno()}
-              onChange={() => {}}
+              onChange={() => { }}
             />
             <label className="form-check-label">
               Dipendenti con tappa intermedia viaggio di ritorno
@@ -383,7 +428,7 @@ class MapComponent extends Component {
               type="radio"
               checked={this.state.navetta}
               onClick={() => this.onChangeNavetta()}
-              onChange={() => {}}
+              onChange={() => { }}
             />
             <label className="form-check-label">
               Dipendenti che utilizzerebbero un servizio di navetta aziendale
@@ -395,7 +440,7 @@ class MapComponent extends Component {
               type="radio"
               checked={this.state.smartworking}
               onClick={() => this.onChangeSmartworking()}
-              onChange={() => {}}
+              onChange={() => { }}
             />
             <label className="form-check-label">Smartworking</label>
           </div>
