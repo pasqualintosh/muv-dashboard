@@ -1,32 +1,36 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import BarGraph from "./../../components/BarGraph/BarGraph";
 import DoughnutGraph from "./../../components/DoughnutGraph/DoughnutGraph";
-import Map from "./../../components/Map/Map";
+import HorizontalGraph from "../../components/TransportTool/TransportTool";
+import DistanceHomeWork from "../../components/DistanceHomeWork/DistanceHomeWork";
+import ModalSplit from "../../components/ModalSplit/ModalSplit";
+import MiddleTrip from "../../components/MiddleTrip/MiddleTrip";
 
 class Charts extends Component {
   render() {
     return (
       <Container>
-        <hr></hr>
         <Row className="justify-content-md-center">
           <Col>
-            <h6>Routes travaled in 2019</h6>
-            <BarGraph />
+            <HorizontalGraph />
           </Col>
         </Row>
         <hr></hr>
         <Row className="justify-content-md-center">
           <Col>
-            <h6>Routes travaled in Palermo</h6>
-            <Map />
+            <DistanceHomeWork />
           </Col>
         </Row>
         <hr></hr>
         <Row className="justify-content-md-center">
           <Col>
-            <h6>Number of routes travaled and used means</h6>
-            <DoughnutGraph />
+            <ModalSplit />
+          </Col>
+        </Row>
+        <hr></hr>
+        <Row className="justify-content-md-center">
+          <Col>
+            <MiddleTrip />
           </Col>
         </Row>
         <hr></hr>

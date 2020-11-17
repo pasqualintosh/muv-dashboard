@@ -4,8 +4,9 @@ import { Switch } from "react-router-dom";
 // import Welcome from "./../screens/Welcome/Welcome";
 // import Login from "./../screens/Login/Login";
 import RouteWrapper from "./Route";
-// import Charts from "./../screens/Charts/Charts";
+import Charts from "./../screens/Charts/Charts";
 import Ghella from "./../screens/Ghella/Ghella";
+import GMap from "./../screens/GMap/GMap";
 // import Palermo from "./../screens/Palermo/Palermo";
 
 class Routes extends Component {
@@ -15,8 +16,9 @@ class Routes extends Component {
         {/* <RouteWrapper path="/" isPrivate={true} exact component={Welcome} /> */}
         {/* <RouteWrapper path="/" exact component={Welcome} /> */}
         <RouteWrapper path="/" exact component={Ghella} />
+        <RouteWrapper path="/directions" exact component={GMap} />
         {/* <RouteWrapper path="/login" exact component={Login} /> */}
-        {/* <RouteWrapper path="/charts" exact component={Charts} /> */}
+        <RouteWrapper path="/graph" exact component={Charts} />
         {/* <RouteWrapper path="/palermo" exact component={Palermo} /> */}
         {/* <RouteWrapper path="/maps" exact component={Ghella} /> */}
       </Switch>

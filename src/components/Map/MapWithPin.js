@@ -7,29 +7,48 @@ import { bus } from "./../../data/bus";
 import { railway } from "./../../data/railway";
 import L from "leaflet";
 import { Form } from "react-bootstrap";
+import axios from "axios";
+
+// https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%0A%0Anode%28_VAR-NODO_%29%3B%0Arel%28bn%29%3B%0A%3E%3E%3B%0A%0Aout%3B%0A
 
 export const personPnt = new L.Icon({
   iconUrl: "./../../assets/man-user.svg",
   iconRetinaUrl: "./../../assets/man-user.svg",
   iconAnchor: [5, 55],
   popupAnchor: [10, -44],
-  iconSize: [30, 30],
+  iconSize: [20, 20],
+  color: "#dc1861",
+  className: "user",
+});
+
+export const metroPnt = new L.Icon({
+  iconUrl: "./../../assets/metro_btn_icn.svg",
+  iconRetinaUrl: "./../../assets/metro_btn_icn.svg",
+  iconAnchor: [5, 55],
+  popupAnchor: [10, -44],
+  iconSize: [50, 50],
+  color: "#dc1861",
+  className: "user",
 });
 
 export const busPnt = new L.Icon({
-  iconUrl: "./../../assets/bus.svg",
-  iconRetinaUrl: "./../../assets/bus.svg",
+  iconUrl: "./../../assets/bus_btn_icn.svg",
+  iconRetinaUrl: "./../../assets/bus_btn_icn.svg",
   iconAnchor: [20, 40],
   popupAnchor: [0, -35],
-  iconSize: [40, 40],
+  iconSize: [50, 50],
+  color: "#FA931E",
+  className: "bus"
 });
 
 export const trainPnt = new L.Icon({
-  iconUrl: "./../../assets/train.svg",
-  iconRetinaUrl: "./../../assets/train.svg",
+  iconUrl: "./../../assets/train_btn_icn.svg",
+  iconRetinaUrl: "./../../assets/train_btn_icn.svg",
   iconAnchor: [20, 40],
   popupAnchor: [0, -35],
-  iconSize: [40, 40],
+  iconSize: [50, 50],
+  color: "#153972",
+  className: "train"
 });
 
 export const companyPnt = new L.Icon({
@@ -37,7 +56,7 @@ export const companyPnt = new L.Icon({
   iconRetinaUrl: "./../../assets/business.svg",
   iconAnchor: [20, 40],
   popupAnchor: [0, -35],
-  iconSize: [60, 60],
+  iconSize: [40, 40],
 });
 
 const start_point = [41.9136351, 12.462278];
@@ -56,8 +75,13 @@ class MapComponent extends Component {
       carpooling: "",
       navetta: false,
       display_tpl: true,
+      display_train: true,
+      display_metro: true,
       smartworking: false,
+      display_node_info: false,
+      node_info: {}
     };
+
   }
 
   handleClick(el) {
@@ -267,13 +291,194 @@ class MapComponent extends Component {
 
   renderBusTooltip(e, index) {
     if (e.properties.name) {
-      return (<div>
-        <p>{e.properties.name}</p>
-      </div>)
+
+      if (this.state.display_node_info) {
+
+        let node_p = this.state.node_info.map((e, i) => (
+          <p key={i}>Linea: {e.ref}</p>
+        ))
+
+        return (
+          <div>
+            <p>Fermata:{e.properties.name}</p>
+            {node_p}
+          </div>
+        )
+      }
+
+      return (
+        <div>
+          <p>{e.properties.name}</p>
+        </div>)
     }
     else {
       return <div />
     }
+  }
+
+  renderTrainTooltip(e, index) {
+    if (e.properties.name) {
+
+      if (this.state.display_node_info) {
+
+        let node_p = this.state.node_info.map((e, i) => (
+          <p key={i}>Linea: {e.ref}</p>
+        ))
+
+        return (
+          <div>
+            <p>Fermata:{e.properties.name}</p>
+            {node_p}
+          </div>
+        )
+      }
+
+      return (
+        <div>
+          <p>{e.properties.name}</p>
+        </div>)
+    }
+    else {
+      return <div />
+    }
+  }
+
+  renderMetroTooltip(e, index) {
+    if (e.properties.name) {
+
+      if (this.state.display_node_info) {
+
+        let node_p = this.state.node_info.map((e, i) => (
+          <p key={i}>Linea: {e.ref}</p>
+        ))
+
+        return (
+          <div>
+            <p>Fermata:{e.properties.name}</p>
+            {node_p}
+          </div>
+        )
+      }
+
+      return (
+        <div>
+          <p>{e.properties.name}</p>
+        </div>)
+    }
+    else {
+      return <div />
+    }
+  }
+
+  handleBusClick(e) {
+    let node = e.id.substring(e.id.indexOf('/') + 1),
+      url = `https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%0A%0Anode%28${node}%29%3B%0Arel%28bn%29%3B%0A%3E%3E%3B%0A%0Aout%3B%0A`;
+
+    console.log(e)
+    this.setState({ display_node_info: false })
+
+    axios
+      .get(url)
+      .then((response) => {
+        console.log(response)
+        let relations = response.data.elements.filter(e => e.type == "relation");
+
+        if (relations.length > 1) {
+          let tags = relations.map(e => e.tags)
+          this.setState({
+            display_node_info: true,
+            node_info: [...tags]
+          })
+        }
+        else {
+          this.setState({
+            display_node_info: true,
+            node_info: [{ ...relations[0].tags }]
+          })
+        }
+
+
+
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .then(() => {
+      });
+  }
+
+  handleTrainClick(e) {
+    let node = e.id.substring(e.id.indexOf('/') + 1),
+      url = `https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%0A%0Anode%28${node}%29%3B%0Arel%28bn%29%3B%0A%3E%3E%3B%0A%0Aout%3B%0A`;
+
+    console.log(e)
+    this.setState({ display_node_info: false })
+
+    axios
+      .get(url)
+      .then((response) => {
+        console.log(response)
+        let relations = response.data.elements.filter(e => e.type == "relation");
+
+        if (relations.length > 1) {
+          let tags = relations.map(e => e.tags)
+          this.setState({
+            display_node_info: true,
+            node_info: [...tags]
+          })
+        }
+        else {
+          this.setState({
+            display_node_info: true,
+            node_info: [{ ...relations[0].tags }]
+          })
+        }
+
+
+
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .then(() => {
+      });
+  }
+
+  handleMetroClick(e) {
+    let node = e.id.substring(e.id.indexOf('/') + 1),
+      url = `https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3B%0A%0Anode%28${node}%29%3B%0Arel%28bn%29%3B%0A%3E%3E%3B%0A%0Aout%3B%0A`;
+
+    console.log(e)
+    this.setState({ display_node_info: false })
+
+    axios
+      .get(url)
+      .then((response) => {
+        console.log(response)
+        let relations = response.data.elements.filter(e => e.type == "relation");
+
+        if (relations.length > 1) {
+          let tags = relations.map(e => e.tags)
+          this.setState({
+            display_node_info: true,
+            node_info: [...tags]
+          })
+        }
+        else {
+          this.setState({
+            display_node_info: true,
+            node_info: [{ ...relations[0].tags }]
+          })
+        }
+
+
+
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .then(() => {
+      });
   }
 
   renderBusMarkers() {
@@ -285,6 +490,9 @@ class MapComponent extends Component {
               position={[e.geometry.coordinates[1], e.geometry.coordinates[0]]}
               key={index}
               icon={busPnt}
+              onclick={() => {
+                this.handleBusClick(e)
+              }}
             >
               <Popup style={{ width: 300, keepInView: true }}>
                 {this.renderBusTooltip(e, index)}
@@ -297,18 +505,50 @@ class MapComponent extends Component {
   }
 
   renderTrainMarkers() {
-    if (this.state.display_tpl)
+    if (this.state.display_train)
       return railway.features.map((e, index) => {
-        if (e.geometry && index % 22 == 0)
+        // if (e.geometry && index % 22 == 0 && e.properties.station == "train")
+        if (e.geometry && e.properties.station == "train")
           return (
             <Marker
               position={[e.geometry.coordinates[1], e.geometry.coordinates[0]]}
               key={index}
               icon={trainPnt}
+              onclick={() => {
+                this.handleTrainClick(e)
+              }}
             >
-              {/* <Popup style={{ width: 300, keepInView: true }}>
-                {this.renderBusTooltip(e, index)}
-              </Popup> */}
+
+              <Popup style={{ width: 300, keepInView: true }}>
+                {this.renderTrainTooltip(e, index)}
+              </Popup>
+
+            </Marker>
+          );
+        else return <div key={index} />;
+      });
+    else return <div />;
+  }
+
+  renderMetroMarkers() {
+    if (this.state.display_metro)
+      return railway.features.map((e, index) => {
+        // if (e.geometry && index % 22 == 0 && e.properties.station == "subway")
+        if (e.geometry && e.properties.station == "subway")
+          return (
+            <Marker
+              position={[e.geometry.coordinates[1], e.geometry.coordinates[0]]}
+              key={index}
+              icon={metroPnt}
+              onclick={() => {
+                this.handleMetroClick(e)
+              }}
+            >
+
+              <Popup style={{ width: 300, keepInView: true }}>
+                {this.renderMetroTooltip(e, index)}
+              </Popup>
+
             </Marker>
           );
         else return <div key={index} />;
@@ -376,7 +616,35 @@ class MapComponent extends Component {
             }}
             onChange={() => { }}
           />
-          <label>&nbsp;Fermate TPL</label>
+          <label>&nbsp;Fermate Bus</label>
+        </div>
+        <div className={"form-group"} style={{ height: "1vh" }}>
+          <input
+            className=""
+            type="radio"
+            checked={this.state.display_train}
+            onClick={() => {
+              this.setState({
+                display_train: !this.state.display_train,
+              });
+            }}
+            onChange={() => { }}
+          />
+          <label>&nbsp;Fermate Treni</label>
+        </div>
+        <div className={"form-group"} style={{ height: "1vh" }}>
+          <input
+            className=""
+            type="radio"
+            checked={this.state.display_metro}
+            onClick={() => {
+              this.setState({
+                display_metro: !this.state.display_metro,
+              });
+            }}
+            onChange={() => { }}
+          />
+          <label>&nbsp;Fermate Metro</label>
         </div>
 
         <Map
@@ -394,6 +662,7 @@ class MapComponent extends Component {
           {this.renderHumanMarkers()}
           {this.renderBusMarkers()}
           {this.renderTrainMarkers()}
+          {this.renderMetroMarkers()}
         </Map>
         <hr />
         <div>

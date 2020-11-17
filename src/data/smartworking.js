@@ -583,7 +583,7 @@ export const smartworking = {
         Produttivi: 10.0,
         CAP: "00196",
       },
-      geometry: { type: "Point", coordinates: [12.466862, 41.933717] },
+      geometry: { type: "Point", coordinates: [12.4665753, 41.929041] },
     },
     {
       type: "Feature",

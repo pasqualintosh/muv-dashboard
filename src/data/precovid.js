@@ -1436,7 +1436,7 @@ export const precovid = {
         q2wHide_precovid: "bicicletta, sharing, auto, moto",
         CAP: "00196",
       },
-      geometry: { type: "Point", coordinates: [12.466862, 41.933717] },
+      geometry: { type: "Point", coordinates: [12.468486, 41.929727] },
     },
     {
       type: "Feature",

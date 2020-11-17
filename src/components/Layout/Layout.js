@@ -17,7 +17,8 @@ class Layout extends Component {
   render() {
     return (
       <Container>
-        {this.state.logged ? <Header /> : <div />}
+        {/* {this.state.logged ? <Header /> : <div />} */}
+        <Header />
         {this.props.children}
       </Container>
     );
