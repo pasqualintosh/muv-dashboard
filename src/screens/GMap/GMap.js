@@ -15,12 +15,16 @@ class Charts extends Component {
             lat_b: 38.1097119,
             lon_b: 13.3584398,
             spelling_directions: [],
-            transit_names: []
+            transit_names: [],
+            transit_distance: null,
+            transit_duration: null,
+            driving_distance: null,
+            driving_duration: null,
         }
     }
 
-    handleChangeDirections = (data = new Array()) => {
-        console.log(data);
+    handleTransitDirections = (data = new Array()) => {
+        console.log(data)
         let transit_names = []
         data[0].legs[0].steps.forEach(s => {
             if (s.travel_mode == "TRANSIT") {
@@ -29,7 +33,24 @@ class Charts extends Component {
         })
         this.setState({
             spelling_directions: [...data],
-            transit_names
+            transit_names,
+            transit_distance: data[0].legs[0].distance.text,
+            transit_duration: data[0].legs[0].duration.text,
+        })
+    }
+
+    handleDrivingDirections = (data = new Array()) => {
+        let driving_names = []
+        data[0].legs[0].steps.forEach(s => {
+            if (s.travel_mode == "TRANSIT") {
+                driving_names.push(s.transit.line.short_name)
+            }
+        })
+        this.setState({
+            spelling_driving_directions: [...data],
+            driving_names,
+            driving_distance: data[0].legs[0].distance.text,
+            driving_duration: data[0].legs[0].duration.text,
         })
     }
 
@@ -100,22 +121,63 @@ class Charts extends Component {
         } else return <div></div>
     }
 
+    renderProperties() {
+        return (
+            <div>
+                <Row className="justify-content-md-center">
+                    <Col>
+                        <p>Mezzo privato</p>
+                    </Col>
+                    <Col>
+                        <p>
+                            Durata viaggio: {this.state.driving_duration}
+                        </p>
+                    </Col>
+                    <Col>
+                        <p>
+                            Distanza viaggio: {this.state.driving_distance}
+                        </p>
+                    </Col>
+                </Row>
+                <Row className="justify-content-md-center">
+                    <Col>
+                        <p>Mezzo pubblico</p>
+                    </Col>
+                    <Col>
+                        <p>
+                            Durata viaggio: {this.state.transit_duration}
+                        </p>
+                    </Col>
+                    <Col>
+                        <p>
+                            Distanza viaggio: {this.state.transit_distance}
+                        </p>
+                    </Col>
+                </Row>
+            </div>
+        )
+    }
+
     render() {
         return (
             <Container>
                 <hr></hr>
+                {this.renderProperties()}
+                {/* 
                 <Row className="justify-content-md-center">
                     {this.renderFormCentro()}
                     {this.renderFormA()}
                     {this.renderFormB()}
-                </Row>
+                </Row> 
+                */}
                 <Row className="justify-content-md-center">
                     <Col>
                         <MyFancyComponent
                             centerCoordinates={{ lat: this.state.lat_centro, lon: this.state.lon_centro }}
                             aCoordinates={{ lat: this.state.lat_a, lon: this.state.lon_a }}
                             bCoordinates={{ lat: this.state.lat_b, lon: this.state.lon_b }}
-                            handleChangeDirections={this.handleChangeDirections}
+                            handleTransitDirections={this.handleTransitDirections}
+                            handleDrivingDirections={this.handleDrivingDirections}
                         />
                     </Col>
                 </Row>

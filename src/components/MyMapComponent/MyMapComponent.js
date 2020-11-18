@@ -32,7 +32,9 @@ export class MyFancyComponent extends React.PureComponent {
                 centerCoordinates={this.props.centerCoordinates}
                 aCoordinates={this.props.aCoordinates}
                 bCoordinates={this.props.bCoordinates}
-                handleChangeDirections={this.props.handleChangeDirections}
+                handleTransitDirections={this.props.handleTransitDirections}
+                handleDrivingDirections={this.props.handleDrivingDirections}
+                isMarkerShown={true}
             />
         )
     }
