@@ -2,6 +2,7 @@ import React from "react"
 import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import { MapWithADirectionsRenderer } from "./../MapWithADirectionsRenderer/MapWithADirectionsRenderer"
+import { MapRawData } from "./../MapRawData/MapRawData"
 
 export const MyMapComponent = compose(
     withProps({
@@ -34,8 +35,20 @@ export class MyFancyComponent extends React.PureComponent {
                 bCoordinates={this.props.bCoordinates}
                 handleTransitDirections={this.props.handleTransitDirections}
                 handleDrivingDirections={this.props.handleDrivingDirections}
+                handleWalkingDirections={this.props.handleWalkingDirections}
+                handleBikingDirections={this.props.handleBikingDirections}
+                handleRenderDatiUtente={this.props.handleRenderDatiUtente}
                 isMarkerShown={true}
             />
+        )
+    }
+}
+
+export class MyRawComponent extends React.PureComponent {
+
+    render() {
+        return (
+            <MapRawData />
         )
     }
 }

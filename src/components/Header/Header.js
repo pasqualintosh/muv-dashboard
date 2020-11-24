@@ -19,7 +19,9 @@ class Header extends Component {
             {/* <Nav.Link href="/">Home</Nav.Link> */}
             {/* <Nav.Link href="/">Mappa</Nav.Link> */}
             <Nav.Link href="/graph">Grafici</Nav.Link>
-            <Nav.Link href="/directions">Google directions</Nav.Link>
+            {/* <Nav.Link href="/directions">Google directions</Nav.Link> */}
+            <Nav.Link href="/tabledata">Table data</Nav.Link>
+            <Nav.Link href="/rawdata">Raw data</Nav.Link>
             {/* 
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
